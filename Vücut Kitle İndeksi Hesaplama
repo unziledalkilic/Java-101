@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class VucutKitleIndeksiHesaplama {
+    public static void main(String[] args) {
+        Scanner oku=new Scanner(System.in);
+        System.out.print("kilo(kg):");
+        double kilo= oku.nextDouble();
+
+        System.out.print("boy(m):");
+        double boy= oku.nextDouble();
+
+        double index=kilo/(boy*boy);
+        System.out.print("indeksiniz:"+index);
+    }
+}
