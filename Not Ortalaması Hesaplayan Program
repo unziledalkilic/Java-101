@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class NotOrtalamasiHesaplayanProgram {
+    public static void main(String[] args) {
+        Scanner oku = new Scanner(System.in);
+
+        System.out.print("matematik:");
+        int mat = oku.nextInt();
+
+        System.out.print("fizik:");
+        int fizik = oku.nextInt();
+
+        System.out.print("kimya:");
+        int kimya = oku.nextInt();
+
+        System.out.print("türkçe:");
+        int turkce = oku.nextInt();
+
+        System.out.print("tarih:");
+        int tarih = oku.nextInt();
+
+        System.out.print("müzik:");
+        int muzik = oku.nextInt();
+
+        int toplam = mat + fizik + kimya + turkce + tarih + muzik;
+        double ortalama = toplam / 6.0;
+
+        System.out.println("ortalamanız=" + ortalama);
+
+        if (ortalama <= 60) {
+            System.out.println("sınıfta kaldı");
+        } else {
+            System.out.println("sınıfı geçti");
+        }
+    }
+}
