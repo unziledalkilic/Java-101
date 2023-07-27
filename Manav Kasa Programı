@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class ManavKasaProgrami {
+    public static void main(String[] args) {
+        Scanner oku=new Scanner(System.in);
+        double armut,elma,domates,muz,patlican;
+        double atop,etop,dtop,mtop,ptop;
+        System.out.print("armut kaç kilo:");
+        armut= oku.nextDouble();
+        System.out.print("elma kaç kilo:");
+        elma=oku.nextDouble();
+        System.out.print("domates kaç kilo:");
+        domates=oku.nextDouble();
+        System.out.print("muz kaç kilo:");
+        muz= oku.nextDouble();
+        System.out.print("patlıcan kaç kilo:");
+        patlican= oku.nextDouble();
+        atop=armut*2.14;
+        etop=elma*3.67;
+        dtop=domates*1.11;
+        mtop=muz*0.95;
+        ptop=patlican*5.00;
+        double total=atop+etop+dtop+mtop+ptop;
+        System.out.println("toplam:"+total);
+    }
+}
