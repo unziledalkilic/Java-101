@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class TaksimetreProgrami {
+    public static void main(String[] args) {
+        int acilisUcreti = 10, min = 20;
+        double total, yolUcret;
+        Scanner oku = new Scanner(System.in);
+        System.out.print("gidilen mesafeyi km cinsinden giriniz:");
+        int km = oku.nextInt();
+        yolUcret = km * 2.20;
+        total = (yolUcret > 20) ? acilisUcreti + yolUcret : 20;
+        System.out.print("tutar:" + total);
+    }
+}
