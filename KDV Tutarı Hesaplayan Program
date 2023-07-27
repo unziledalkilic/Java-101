@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class KDVTutariHesaplayanProgram {
+    public static void main(String[] args) {
+
+        Scanner oku = new Scanner(System.in);
+
+        double KDVoran, KDVli, KDV;
+
+        System.out.print("ürün fiyatını giriniz:");
+        int urunFiyat = oku.nextInt();
+
+        KDVoran = urunFiyat < 1000 ? 0.18 : 0.08;
+        KDV = urunFiyat * KDVoran;
+        KDVli = KDV + urunFiyat;
+
+        System.out.println("Ürün fiyat:" + urunFiyat);
+        System.out.println("KDV oranı:" + KDVoran);
+        System.out.println("KDV'li fiyat:" + KDVli);
+
+    }
+}
