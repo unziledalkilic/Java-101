@@ -27,10 +27,6 @@ public class NotOrtalamasiHesaplayanProgram {
 
         System.out.println("ortalamanız=" + ortalama);
 
-        if (ortalama <= 60) {
-            System.out.println("sınıfta kaldı");
-        } else {
-            System.out.println("sınıfı geçti");
-        }
+        System.out.println(ortalama < 60 ? "sınıfta kaldı " : "sınıfı geçti");
     }
 }
