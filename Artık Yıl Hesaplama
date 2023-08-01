@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class ArtikYilHesaplama {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.print("doğum yılınızı girin:");
+        int yil= scan.nextInt();
+        if(yil%4==0){
+            System.out.println("artık yıl");
+        }else{
+            System.out.println("artık yıl değil");
+        }
+    }
+}
