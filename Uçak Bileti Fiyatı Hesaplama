@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class UcakBiletiFiyatiHesaplama {
+    public static void main(String[] args) {
+        int km, yas, yolculukTipi;
+        double kmUcret = 0.10, indirim, indirim2, sonFiyat = 0;
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("yaşınızı girin:");
+        yas = scan.nextInt();
+        if (yas < 0) {
+            System.out.println("geçersiz yaş girdiniz");
+            System.exit(1);
+        }
+        System.out.print("mesafeyi km cinsinden girin:");
+        km = scan.nextInt();
+        if (km < 0) {
+            System.out.println("geçersiz km girdiniz");
+            System.exit(1);
+        }
+
+        double biletFiyat = km * kmUcret;
+
+        System.out.println("yolculuk tipini seçiniz:");
+        System.out.println("tek yön -> 1");
+        System.out.println("gidiş-dönüş -> 2");
+        yolculukTipi = scan.nextInt();
+        if (yolculukTipi == 1 || yolculukTipi == 2) {
+            if (yolculukTipi == 2) {
+                if (yas < 12) {
+                    indirim = biletFiyat * 0.5;
+                    indirim2 = biletFiyat * 0.2;
+                    sonFiyat = 2 * (biletFiyat - indirim - indirim2);
+                } else if (yas > 12 && yas <= 24) {
+                    indirim = biletFiyat * 0.1;
+                    indirim2 = biletFiyat * 0.2;
+                    sonFiyat = 2 * (biletFiyat - indirim - indirim2);
+                } else if (yas > 65) {
+                    indirim = biletFiyat * 0.3;
+                    indirim2 = biletFiyat * 0.2;
+                    sonFiyat = 2 * (biletFiyat - indirim - indirim2);
+                }
+                System.out.print("bilet fiyatı=" + sonFiyat);
+            } else {
+                if (yas < 12) {
+                    indirim = biletFiyat * 0.5;
+                    sonFiyat = biletFiyat - indirim;
+                } else if (yas > 12 && yas <= 24) {
+                    indirim = biletFiyat * 0.1;
+                    sonFiyat = biletFiyat - indirim;
+                } else if (yas > 65) {
+                    indirim = biletFiyat * 0.3;
+                    sonFiyat = biletFiyat - indirim;
+                }
+                System.out.print("bilet fiyatı=" + sonFiyat);
+            }
+        } else {
+            System.out.println("geçersiz seçim yaptınız");
+        }
+    }
+}
