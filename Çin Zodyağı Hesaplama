@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class CinZodyagiHesaplama {
+    public static void main(String[] args) {
+        int dogumYili;
+        String burc ="";
+        Scanner scan = new Scanner(System.in);
+        System.out.print("doğum yılınız:");
+        dogumYili = scan.nextInt();
+        if (dogumYili > 0) {
+            if (dogumYili % 12 == 0)
+                burc = "maymun";
+            else if (dogumYili % 12 == 1)
+                burc = "horoz";
+            else if (dogumYili % 12 == 2)
+                burc = "köpek";
+            else if (dogumYili % 12 == 3)
+                burc = "domuz";
+            else if (dogumYili % 12 == 4)
+                burc = "fare";
+            else if (dogumYili % 12 == 5)
+                burc = "öküz";
+            else if (dogumYili % 12 == 6)
+                burc = "kaplan";
+            else if (dogumYili % 12 == 7)
+                burc = "tavşan";
+            else if (dogumYili % 12 == 8)
+                burc = "ejderha";
+            else if (dogumYili % 12 == 9)
+                burc = "yılan";
+            else if (dogumYili % 12 == 10)
+                burc = "at";
+            else if (dogumYili % 12 == 11)
+                burc = "koyun";
+
+        } else {
+            System.out.println("hatalı yıl giridiniz.");
+        }
+        System.out.print("burcunuz:"+burc);
+    }
+}
