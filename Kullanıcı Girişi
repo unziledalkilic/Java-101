@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class KullaniciGirisi {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String kullaniciAdi = "java";
+        String sifre = "101";
+
+        System.out.print("kullanıcı adınız giriniz: ");
+        String ad = scanner.nextLine();
+        System.out.print("şifrenizi giriniz: ");
+        String parola = scanner.nextLine();
+
+        if (kullaniciAdi.equals(ad) && sifre.equals(parola)) {
+            System.out.println("giriş başarılı");
+        } else if (!(kullaniciAdi.equals(ad)) && sifre.equals(parola)) {
+            System.out.println("kullanıcı adı hatalı. tekrar deneyiniz.");
+        } else if (!(kullaniciAdi.equals(ad)) && !(sifre.equals(parola))) {
+            System.out.println("kullanıcı adı ve şifre hatalı. tekrar deneyiniz.");
+        } else {
+            System.out.println("şifre yanlış. yeni şifre oluşturmak ister misiniz");
+            System.out.println("evet için e hayır için h yazınız");
+            String secim = scanner.nextLine();
+            if (secim.equals("h")) {
+                System.out.println("şifreniz değiştirilmedi. ana sayfaya yönelendiriliyorsunuz");
+            } else if (secim.equals("e")) {
+                System.out.print("yeni şifrenizi giriniz: ");
+                String yeniSifre = scanner.nextLine();
+                if (sifre.equals(yeniSifre)) {
+                    System.out.println("şifre oluşturulmadı. yeniden deneyin.");
+                } else {
+                    System.out.println("şifre başarıyla değiştirildi. ana sayfaya yönelendiriliyorsunuz");
+                }
+
+            }
+        }
+    }
+}
