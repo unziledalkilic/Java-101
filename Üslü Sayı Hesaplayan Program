@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class UsluSayiHesaplayanProgram {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("taban değerini giriniz= ");
+        int taban = scanner.nextInt();
+        System.out.print("üs değerini giriniz= ");
+        int us = scanner.nextInt();
+        int sonuc = 1;
+
+        for (int i = 1; i <= us; i++) {
+            sonuc = sonuc * taban;
+        }
+        System.out.print("sonuç= " + sonuc);
+    }
+}
